@@ -1,0 +1,1 @@
+console.log("Geek Legends carregado com sucesso!");
