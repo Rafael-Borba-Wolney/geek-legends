@@ -4,74 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Geek Legends</title>
-  <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/login.css">
 </head>
 <body>
 
-  <header class="header">
-    <div class="logo-area">
-      <div class="logo-box">GL</div>
-      <div class="logo-text">
-        <h1>Geek Legends</h1>
-        <p>Produtos Dignos de Lenda</p>
-      </div>
-    </div>
+  <header>
+    <h1>Geek Legends</h1>
+    <p>Produtos Dignos de Lenda</p>
 
-    <nav class="nav">
+    <nav>
       <a href="index.html">Início</a>
       <a href="produtos.html">Produtos</a>
       <a href="#">Sobre</a>
+      <a href="login.html">Login</a>
     </nav>
-
-    <div class="nav-right">
-      <a href="login.html" class="login-link active-link">Login</a>
-      <span class="cart-icon">🛒</span>
-    </div>
   </header>
 
-  <main class="login-page">
-    <section class="login-wrapper">
-      <div class="mini-logo">GL</div>
-      <h2 class="login-title">Bem-vindo de Volta!</h2>
-      <p class="login-subtitle">Entre na sua conta para continuar</p>
+  <main>
+    <section>
+      <h2>Login</h2>
+      <p>Entre na sua conta para continuar</p>
 
-      <div class="login-card">
-        <div class="form-group">
-          <label for="email">Email</label>
-          <div class="input-box">
-            <span class="input-icon">✉</span>
-            <input type="email" id="email" placeholder="seu@email.com">
-          </div>
-        </div>
+      <form>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Digite seu email">
 
-        <div class="form-group">
-          <label for="senha">Senha</label>
-          <div class="input-box">
-            <span class="input-icon">🔒</span>
-            <input type="password" id="senha" placeholder="••••••••">
-          </div>
-        </div>
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha">
 
-        <div class="forgot-password">
-          <a href="#">Esqueceu a senha?</a>
-        </div>
+        <button type="submit">Entrar</button>
+      </form>
 
-        <button class="btn-login">⚡ Entrar</button>
-
-        <p class="register-text">
-          Não tem uma conta? <a href="#">Cadastre-se</a>
-        </p>
-
-        <div class="divider">ou continue com</div>
-
-        <div class="social-buttons">
-          <button class="social-btn">Google</button>
-          <button class="social-btn">GitHub</button>
-        </div>
-
-        <a href="index.html" class="back-link">← Voltar para o início</a>
-      </div>
+      <p><a href="#">Esqueceu a senha?</a></p>
+      <p>Não tem conta? <a href="#">Cadastre-se</a></p>
+      <p><a href="index.html">Voltar para o início</a></p>
     </section>
   </main>
 
