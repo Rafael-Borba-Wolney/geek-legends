@@ -1,38 +1,14 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f5f6fa;
-}
-
-header {
-  background-color: #6c5ce7;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-main {
-  padding: 20px;
-}
-
 section {
   background-color: white;
-  width: 320px;
-  margin: 30px auto;
+  margin: 20px auto;
   padding: 20px;
+  width: 320px;
   border-radius: 8px;
-  text-align: left;
 }
 
 h2 {
   color: #6c5ce7;
-  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 form {
@@ -49,6 +25,8 @@ input {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
@@ -59,9 +37,18 @@ button {
   color: white;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-a {
-  color: #6c5ce7;
+button:hover {
+  background-color: #009d7d;
+}
+
+section a {
+  color: #00b894;
   text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
 }
