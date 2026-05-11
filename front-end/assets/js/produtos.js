@@ -1,4 +1,4 @@
-// Pega todos os produtos da página
+/* // Pega todos os produtos da página
 const produtos = document.querySelectorAll(".produto");
 
 // Pega todas as categorias do filtro
@@ -131,4 +131,15 @@ botoesCarrinho.forEach(function (botao) {
     alert("Produto adicionado ao carrinho!");
   });
 
-});
+}); */
+
+async function carregarProdutos() {
+
+    let resposta = await fetch("http://localhost:3000/produtos");
+
+    let produtos = await resposta.json();
+
+    console.log(produtos);
+}
+
+carregarProdutos();
