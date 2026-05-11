@@ -1,0 +1,188 @@
+/* Estilo geral da página */
+body {
+  margin: 0;
+  background-color: #020617;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho com logo e menu */
+.cabecalho {
+  background-color: #030712;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 100px;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* Logo ao lado do texto */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icone-logo,
+.icone-login {
+  background: linear-gradient(135deg, #00d4ff, #9b5cff);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.logo h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.logo p {
+  font-size: 12px;
+  margin: 0;
+  color: #aaa;
+}
+
+/* Menu de navegação */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 35px;
+}
+
+nav a:hover,
+nav .ativo {
+  color: #00d4ff;
+}
+
+/* Centraliza a área de login */
+.conteudo-login {
+  width: 420px;
+  margin: 45px auto 0;
+}
+
+/* Parte de título acima do card */
+.topo-login {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.icone-login {
+  display: inline-block;
+  font-size: 22px;
+}
+
+.topo-login h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.topo-login p {
+  color: #b6c2d9;
+}
+
+/* Card do formulário */
+.card-login {
+  background-color: #0f172a;
+  border: 1px solid #31205c;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+/* Organização do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input {
+  padding: 15px;
+  margin-bottom: 25px;
+  background-color: #1e293b;
+  border: 1px solid #31205c;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+}
+
+/* Link de recuperar senha */
+.esqueceu {
+  color: #00d4ff;
+  text-align: right;
+  text-decoration: none;
+  margin-bottom: 25px;
+}
+
+/* Botão principal */
+button {
+  padding: 15px;
+  background: linear-gradient(90deg, #00d4ff, #9b2cff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* Texto de cadastro */
+.cadastro {
+  text-align: center;
+  color: #b6c2d9;
+}
+
+.cadastro a {
+  color: #00d4ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Linha com texto no meio */
+.divisor {
+  text-align: center;
+  color: #b6c2d9;
+  border-top: 1px solid #31205c;
+  margin: 30px 0 20px;
+}
+
+.divisor span {
+  background-color: #0f172a;
+  padding: 0 10px;
+  position: relative;
+  top: -10px;
+}
+
+/* Botões de login social */
+.login-social {
+  display: flex;
+  gap: 10px;
+}
+
+.login-social a {
+  width: 50%;
+  text-align: center;
+  padding: 13px;
+  color: white;
+  text-decoration: none;
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Rodapé */
+.rodape {
+  margin-top: 60px;
+  padding: 25px;
+  text-align: center;
+  background-color: #030712;
+  border-top: 1px solid #1e293b;
+  color: #94a3b8;
+}
