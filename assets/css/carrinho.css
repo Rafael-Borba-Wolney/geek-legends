@@ -1,0 +1,167 @@
+/* Estilo geral da página */
+body {
+  margin: 0;
+  background-color: #020617;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho com logo e menu */
+.cabecalho {
+  background-color: #030712;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 100px;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* Logo ao lado do texto */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icone-logo {
+  background: linear-gradient(135deg, #00d4ff, #9b5cff);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.logo h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.logo p {
+  font-size: 12px;
+  margin: 0;
+  color: #aaa;
+}
+
+/* Menu de navegação */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 35px;
+}
+
+nav a:hover,
+nav .ativo {
+  color: #00d4ff;
+}
+
+/* Área central do carrinho vazio */
+.carrinho-vazio {
+  text-align: center;
+  padding: 70px 20px 140px;
+}
+
+.icone-carrinho {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.carrinho-vazio h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.carrinho-vazio p {
+  color: #b6c2d9;
+  margin-bottom: 30px;
+}
+
+/* Botão principal */
+.botao-carrinho {
+  display: inline-block;
+  padding: 16px 32px;
+  background: linear-gradient(90deg, #00d4ff, #9b2cff);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.botao-carrinho:hover {
+  opacity: 0.85;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: #030712;
+  border-top: 1px solid #1e293b;
+  padding: 45px 100px 15px;
+}
+
+.conteudo-rodape {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  border-bottom: 1px solid #31205c;
+  padding-bottom: 35px;
+}
+
+.coluna-rodape {
+  width: 30%;
+}
+
+.coluna-rodape p {
+  color: #b6c2d9;
+  line-height: 1.5;
+}
+
+.coluna-rodape h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.coluna-rodape a {
+  display: block;
+  color: #b6c2d9;
+  text-decoration: none;
+  margin-bottom: 14px;
+}
+
+.coluna-rodape a:hover {
+  color: #00d4ff;
+}
+
+/* Ícones das redes sociais */
+.redes-sociais {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.redes-sociais a {
+  width: 35px;
+  height: 35px;
+  background-color: #1e1238;
+  border: 1px solid #6c2bd9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b6c2d9;
+  margin: 0;
+}
+
+/* Texto final do rodapé */
+.direitos {
+  text-align: center;
+  color: #b6c2d9;
+  margin-top: 30px;
+}
+
+/* Contador do carrinho */
+#contador-carrinho {
+  background-color: #00d4ff;
+  color: #020617;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+}

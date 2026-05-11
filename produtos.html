@@ -1,81 +1,393 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produtos - Geek Legends</title>
-  <link rel="stylesheet" href="assets/css/global.css">
+
+  <!-- CSS da página de produtos -->
   <link rel="stylesheet" href="assets/css/produtos.css">
 </head>
+
 <body>
 
-  <header>
-    <h1>Geek Legends</h1>
-    <p>Produtos Dignos de Lenda</p>
+  <!-- Cabeçalho com logo e menu -->
+  <header class="cabecalho">
+    <div class="logo">
+      <div class="icone-logo">GL</div>
+
+      <div>
+        <h1>Geek Legends</h1>
+        <p>Produtos Dignos de Lenda</p>
+      </div>
+    </div>
 
     <nav>
       <a href="index.html">Início</a>
-      <a href="produtos.html">Produtos</a>
-      <a href="#">Sobre</a>
+      <a href="produtos.html" class="ativo">Produtos</a>
+      <a href="sobre.html">Sobre</a>
       <a href="login.html">Login</a>
+      <!-- Link do carrinho com contador -->
+      <a href="carrinho.html" class="link-carrinho"> 🛒 <span id="contador-carrinho">0</span> </a>
     </nav>
   </header>
 
-  <main>
-    <section>
+  <main class="conteudo">
+
+    <!-- Título da página -->
+    <section class="titulo-pagina">
       <h2>Nossos Produtos</h2>
-      <p>Explore nossa coleção de produtos geek</p>
+      <p>Explore nossa coleção completa de produtos geek</p>
     </section>
 
-    <section>
-      <h3>Buscar Produto</h3>
-      <input type="text" placeholder="Buscar produtos...">
-    </section>
+    <!-- Área principal com filtros e produtos -->
+    <section class="area-produtos">
 
-    <section>
-      <h3>Categorias</h3>
-      <ul>
-        <li>Todos os Produtos</li>
-        <li>Filmes</li>
-        <li>Séries</li>
-        <li>Jogos</li>
-        <li>Animes</li>
-        <li>Tecnologia</li>
-      </ul>
-    </section>
+      <aside class="filtros">
+        <h3>🔎 Filtros</h3>
 
-    <section>
-      <h3>Produtos</h3>
+        <h4>Categorias</h4>
 
-      <div>
-        <img src="assets/img/teclado.jpg" alt="Teclado Mecânico RGB Gamer" width="200">
-        <h4>Teclado Mecânico RGB Gamer</h4>
-        <p>Teclado mecânico para gamers com iluminação RGB.</p>
-        <p>R$ 459,90</p>
-        <button>Adicionar ao carrinho</button>
+        <ul>
+          <li class="selecionado">Todos os Produtos</li>
+          <li>🎬 Filmes</li>
+          <li>📺 Séries</li>
+          <li>🎮 Jogos</li>
+          <li>⚡ Animes</li>
+          <li>💻 Tecnologia</li>
+        </ul>
+      </aside>
+
+      <div class="lista-produtos">
+        <!-- Campo de busca dos produtos -->
+      <input type="text" class="buscar-produto" placeholder="🔍  Buscar produtos...">
+
+        <p class="resultado">Encontrados <span>18</span> produtos</p>
+
+        <div class="cards-produtos">
+
+          <!-- Tecnologia -->
+          <div class="produto tecnologia">
+            <img src="assets/img/tecladoGamer.jpg" alt="Teclado Gamer Gurumania">
+
+            <div class="info-produto">
+              <h4>Teclado Gamer Gurumania Semi Mecânico RGB</h4>
+              <p>Teclado gamer semi mecânico com iluminação RGB e tecnologia Anti-Ghosting, ideal para jogos no PC, Xbox, PS4 e PS5.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 65,99</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto tecnologia">
+            <img src="assets/img/headset.jpg" alt="Headset Cyberpunk Neon">
+
+            <div class="info-produto">
+              <h4>Headset Cyberpunk Neon</h4>
+              <p>Headset gamer com som surround, microfone integrado e cancelamento de ruído para partidas mais imersivas.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 389,90</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Animes -->
+          <div class="produto animes">
+            <img src="assets/img/anime.jpg" alt="Action Figure Anime Edition">
+
+            <div class="info-produto">
+              <h4>Action Figure Anime Edition</h4>
+              <p>Figure de coleção premium com visual inspirado em anime, acabamento detalhado e ótimo destaque para decoração.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 279,90</strong>
+               <!-- Botão para adicionar produto ao carrinho -->
+              <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tecnologia -->
+          <div class="produto tecnologia">
+            <img src="assets/img/tecladoGamer2.jpg" alt="Teclado Gamer Titorion">
+
+            <div class="info-produto">
+              <h4>Teclado Gamer Titorion Branco RGB</h4>
+              <p>Teclado branco semi mecânico com LED Rainbow, resposta rápida e visual moderno para deixar o setup mais bonito.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 120,00</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto tecnologia">
+            <img src="assets/img/Alexa.jpg" alt="Alexa">
+
+            <div class="info-produto">
+              <h4>Echo Dot 5ª Geração Amazon</h4>
+              <p>Alto-falante inteligente com Alexa, som potente e controle por voz para músicas, podcasts e dispositivos da casa.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 430,00</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto tecnologia">
+            <img src="assets/img/Monitor.jpg" alt="Monitor">
+
+            <div class="info-produto">
+              <h4>Monitor Gamer LG 24” Full HD 100Hz</h4>
+              <p>Monitor gamer LG 24” Full HD IPS com 100Hz, HDMI e recursos para jogos, oferecendo imagens mais fluidas.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 520,00</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Animes -->
+          <div class="produto animes">
+            <img src="assets/img/CamisetaLuffy.jpg" alt="Camiseta Luffy">
+
+            <div class="info-produto">
+              <h4>Camiseta Luffy One Piece Gear 5</h4>
+              <p>Camiseta One Piece com estampa do Luffy Gear 5, tecido confortável e estilo perfeito para fãs de anime.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 30,00</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto animes">
+            <img src="assets/img/BonecoRoronoa.jpg" alt="Boneco Roronoa">
+
+            <div class="info-produto">
+              <h4>Action Figure Roronoa Zoro</h4>
+              <p>Boneco do Roronoa Zoro com base de apoio e espadas, ideal para decorar o setup ou completar a coleção.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 80,00</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto animes">
+            <img src="assets/img/BonecoPain.jpg" alt="Boneco Pain">
+
+            <div class="info-produto">
+              <h4>Boneco Pain Naruto Shippuden 23cm</h4>
+              <p>Estátua colecionável do Pain com 23cm, acabamento detalhado e base para exposição.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 94,50</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto animes">
+            <img src="assets/img/ChaveiroEsfera.jpg" alt="Chaveiro Esfera">
+
+            <div class="info-produto">
+              <h4>Chaveiro Esfera do Dragão 4 Estrelas</h4>
+              <p>Chaveiro da Esfera do Dragão de 4 estrelas, perfeito para chaves, mochilas ou coleção geek.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 19,90</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jogos -->
+          <div class="produto jogos">
+            <img src="assets/img/JogoXadrez.jpg" alt="Jogo Xadrez">
+
+            <div class="info-produto">
+              <h4>Jogo de Xadrez Magnético Dobrável</h4>
+              <p>Jogo de xadrez magnético dobrável, compacto e prático para jogar em casa ou levar em viagens.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 46,90</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto jogos">
+            <img src="assets/img/BancoImobiliário.jpg" alt="Banco Imobiliário">
+
+            <div class="info-produto">
+              <h4>Super Banco Imobiliário com Maquininha</h4>
+              <p>Jogo Super Banco Imobiliário com tabuleiro, maquininha, cartas, dados e peças para partidas divertidas em grupo.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 169,99</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto jogos">
+            <img src="assets/img/JogoLegoBatman.jpg" alt="Jogo Lego Batman">
+
+            <div class="info-produto">
+              <h4>Jogo LEGO Batman PS5</h4>
+              <p>Jogo LEGO Batman para PS5 com ação, aventura, mundo aberto e modo offline para até 2 jogadores.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 299,99</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto jogos">
+            <img src="assets/img/QuebracabeçaBatman.jpg" alt="Quebra-cabeça Batman">
+
+            <div class="info-produto">
+              <h4>Quebra-cabeça Batman e Robin MDF</h4>
+              <p>Quebra-cabeça premium em MDF com 49 peças, impressão de alta qualidade e visual inspirado em Batman e Robin.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 49,99</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto jogos">
+            <img src="assets/img/ConsoleX9.jpg" alt="Console X9">
+
+            <div class="info-produto">
+              <h4>Console X9 Premium Portátil</h4>
+              <p>Console portátil compacto com 16GB, ideal para jogar em qualquer lugar com praticidade e diversão.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 246,00</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Séries -->
+          <div class="produto series">
+            <img src="assets/img/BonecosTheBigBangTheory.jpg" alt="Bonecos The Big Bang Theory">
+
+            <div class="info-produto">
+              <h4>Bonecos The Big Bang Theory</h4>
+              <p>Bonecos colecionáveis inspirados em The Big Bang Theory, ideais para fãs da série e decoração geek.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 450,99</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto series">
+            <img src="assets/img/DvdsChaves.jpg" alt="DVDs Chaves">
+
+            <div class="info-produto">
+              <h4>DVDs Chaves Série Completa</h4>
+              <p>Coleção completa de Chaves em DVD com 275 episódios clássicos para assistir e reviver momentos nostálgicos.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 171,00</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto series">
+            <img src="assets/img/CamisaFeminina.jpg" alt="Camisa Feminina Friends">
+
+            <div class="info-produto">
+              <h4>Baby Look Friends Feminina</h4>
+              <p>Baby look feminina Friends em algodão, com modelagem confortável e estampa perfeita para fãs da série.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 37,00</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto series">
+            <img src="assets/img/CanecaGameOfThrones.jpg" alt="Caneca Game Of Thrones">
+
+            <div class="info-produto">
+              <h4>Caneca Game of Thrones 325ml</h4>
+              <p>Caneca de porcelana Game of Thrones com 325ml, estampa personalizada e acabamento resistente.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 52,00</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="produto series">
+            <img src="assets/img/MiniaturaNaveStarTrek.jpg" alt="Miniatura Nave Star Trek">
+
+            <div class="info-produto">
+              <h4>Miniatura Nave Star Trek Enterprise</h4>
+              <p>Miniatura da nave Enterprise em die-cast, com acabamento detalhado e embalagem colecionável.</p>
+
+              <div class="preco-botao">
+                <strong>R$ 158,00</strong>
+                 <!-- Botão para adicionar produto ao carrinho -->
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <hr>
-
-      <div>
-        <img src="assets/img/headset.jpg" alt="Headset Cyberpunk Neon" width="200">
-        <h4>Headset Cyberpunk Neon</h4>
-        <p>Headset gamer com som surround e microfone.</p>
-        <p>R$ 389,90</p>
-        <button>Adicionar ao carrinho</button>
-      </div>
-
-      <hr>
-
-      <div>
-        <img src="assets/img/anime.jpg" alt="Figure Premium" width="200">
-        <h4>Figure Premium</h4>
-        <p>Figure de coleção premium com detalhes incríveis.</p>
-        <p>R$ 279,90</p>
-        <button>Adicionar ao carrinho</button>
-      </div>
     </section>
+
+      <!-- Rodapé da página -->
+<footer class="rodape">
+  <p>© 2025 Geek Legends - Todos os direitos reservados.</p>
+</footer>
+
   </main>
 
+  <!-- JavaScript da página de produtos -->
+<script src="assets/js/produtos.js"></script>
+
 </body>
+
 </html>

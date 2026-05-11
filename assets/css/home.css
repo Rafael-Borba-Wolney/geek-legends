@@ -1,31 +1,178 @@
-section {
-  background-color: white;
-  margin: 20px auto;
-  padding: 20px;
-  width: 80%;
-  border-radius: 8px;
+/* Estilo geral da página */
+body {
+  margin: 0;
+  background-color: #020617;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
-h2,
-h3 {
-  color: #6c5ce7;
+/* Cabeçalho com logo e menu */
+.cabecalho {
+  background-color: #030712;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ padding: 15px 40px;
 }
 
-section a {
-  color: #00b894;
-  margin-right: 10px;
+/* Logo ao lado do texto */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icone-logo {
+  background: linear-gradient(135deg, #00d4ff, #9b5cff);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.logo h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.logo p {
+  font-size: 12px;
+  margin: 0;
+  color: #aaa;
+}
+
+/* Menu de navegação */
+nav a {
+  color: white;
   text-decoration: none;
+  margin-left: 30px;
 }
 
-section a:hover {
-  text-decoration: underline;
+nav a:hover,
+nav .ativo {
+  color: #00d4ff;
+}
+
+/* Área principal de apresentação */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #17112f, #111827);
+}
+
+.hero h2 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.hero h2 span {
+  color: #8b5cf6;
+}
+
+.hero p {
+  max-width: 620px;
+  margin: 20px auto;
+  font-size: 18px;
+}
+
+/* Botões da área principal */
+.botao {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.principal {
+  background: linear-gradient(90deg, #00d4ff, #9b2cff);
+}
+
+.secundario {
+  background-color: #1f1b2e;
+  border: 1px solid #333;
+}
+
+/* Seção das categorias */
+.categorias {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #020617;
+}
+
+.categorias h3 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.categorias > p {
+  color: #b6c2d9;
+}
+
+/* Cards lado a lado */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+  flex-wrap: wrap;
 }
 
 .card-home {
-  background-color: #eeeeee;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  width: 120px;
+  background-color: #182233;
+  width: 160px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #2d3b55;
   text-align: center;
+}
+
+.card-home p {
+  font-size: 40px;
+  margin: 0;
+}
+
+.card-home h4 {
+  font-size: 18px;
+}
+
+/* Efeito quando passa o mouse no card */
+.card-home:hover {
+  transform: translateY(-5px); /* sobe um pouquinho */
+  border-color: #00d4ff;       /* muda a borda */
+}
+
+/* Animação suave nos cards */
+.card-home {
+  transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse no botão principal */
+.principal:hover {
+  opacity: 0.85;
+}
+
+/* Efeito no botão secundário */
+.secundario:hover {
+  background-color: #2a2440;
+}
+
+/* Sombra simples nos cards */
+.card-home {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sombra no botão principal */
+.principal {
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+  padding: 20px;
+  background-color: #030712;
+  color: #aaa;
 }
