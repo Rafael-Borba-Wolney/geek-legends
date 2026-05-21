@@ -1,4 +1,4 @@
-import dotenv from 'dotenv';
+//import dotenv from 'dotenv';
 dotenv.config(); // Precisa chamar antes de usar process.env
 
 import express from 'express';
