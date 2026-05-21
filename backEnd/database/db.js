@@ -1,6 +1,7 @@
-import 'dotenv/config';
-import pkg from 'pg';
+import dotenv from 'dotenv';
+dotenv.config();
 
+import pkg from 'pg';
 const { Pool } = pkg;
 
 const pool = new Pool({
@@ -11,6 +12,4 @@ const pool = new Pool({
   database: process.env.DB_NAME
 });
 
-export default {
-  query: (text, params) => pool.query(text, params)
-};
+export const query = (text, params) => pool.query(text, params);
