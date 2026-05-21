@@ -1,9 +1,9 @@
-import express from 'express';
+import { Router } from 'express';
+import { cadastrar, login } from '../controllers/usuariosController.js';
 
-const router = express.Router();
+const router = Router();
 
-router.get('/', (req, res) => {
-  res.json({ mensagem: "Rota de usuários funcionando!" });
-});
+router.post('/cadastrar', cadastrar);
+router.post('/login', login);
 
 export default router;
