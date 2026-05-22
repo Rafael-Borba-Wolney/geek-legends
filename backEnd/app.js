@@ -1,4 +1,5 @@
-//import dotenv from 'dotenv';
+//TODO: Create a new user, make the login, get the auth key, keep following the steps.
+import dotenv from 'dotenv';
 dotenv.config(); // Precisa chamar antes de usar process.env
 
 import express from 'express';
