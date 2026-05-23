@@ -5,7 +5,8 @@ import express from 'express';
 import cors from 'cors';
 
 import usuariosRoutes from './routes/usuarios.js';
-
+import carrinhoRoutes from './routes/carrinho.js';
+import pedidoRoutes from './routes/pedido.js';
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -13,7 +14,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/usuarios', usuariosRoutes);
-
+app.use('/api/carrinho', carrinhoRoutes);
+app.use('/api/pedidos', pedidoRoutes);
 import { query } from './database/db.js';
 app.get('/api/health', async (req, res) => {
   try {
