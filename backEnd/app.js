@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-dotenv.config(); // Precisa chamar antes de usar process.env
+dotenv.config();
 
 import express from 'express';
 import cors from 'cors';
@@ -7,6 +7,11 @@ import cors from 'cors';
 import usuariosRoutes from './routes/usuarios.js';
 import carrinhoRoutes from './routes/carrinho.js';
 import pedidoRoutes from './routes/pedido.js';
+import categoriasRoutes from './routes/categorias.js';
+import produtosRoutes from './routes/produtos.js';
+
+import { query } from './database/db.js';
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -16,7 +21,9 @@ app.use(express.json());
 app.use('/api/usuarios', usuariosRoutes);
 app.use('/api/carrinho', carrinhoRoutes);
 app.use('/api/pedidos', pedidoRoutes);
-import { query } from './database/db.js';
+app.use('/api/categorias', categoriasRoutes);
+app.use('/api/produtos', produtosRoutes);
+
 app.get('/api/health', async (req, res) => {
   try {
     await query('SELECT 1');
