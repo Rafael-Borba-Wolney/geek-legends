@@ -1,0 +1,219 @@
+/* Estilo geral da página */
+body {
+  margin: 0;
+  background-color: #020617;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho com logo e menu */
+.cabecalho {
+  background-color: #030712;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 100px;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* Logo ao lado do texto */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icone-logo {
+  background: linear-gradient(135deg, #00d4ff, #9b5cff);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.logo h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.logo p {
+  font-size: 12px;
+  margin: 0;
+  color: #aaa;
+}
+
+/* Menu de navegação */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 35px;
+}
+
+nav a:hover,
+nav .ativo {
+  color: #00d4ff;
+}
+
+/* Conteúdo central da página */
+.conteudo {
+  width: 87%;
+  margin: 0 auto;
+}
+
+/* Título da página de produtos */
+.titulo-pagina {
+  margin: 35px 0;
+}
+
+.titulo-pagina h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.titulo-pagina p {
+  color: #b6c2d9;
+}
+
+/* Área com filtros e produtos lado a lado */
+.area-produtos {
+  display: flex;
+  gap: 30px;
+}
+
+/* Caixa de filtros */
+.filtros {
+  width: 220px;
+  background-color: #0f172a;
+  border: 1px solid #31205c;
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.filtros h3 {
+  margin-top: 0;
+}
+
+.filtros ul {
+  list-style: none;
+  padding: 0;
+}
+
+.filtros li {
+  padding: 12px;
+  color: #cbd5e1;
+}
+
+.filtros .selecionado {
+  color: #00d4ff;
+  border: 1px solid #00d4ff;
+  border-radius: 8px;
+  background-color: #24194a;
+}
+
+/* Área direita onde ficam busca e produtos */
+.lista-produtos {
+  flex: 1;
+}
+
+/* Campo de busca */
+.lista-produtos input {
+  width: 100%;
+  padding: 15px;
+  background-color: #080d19;
+  border: 1px solid #31205c;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+}
+
+.resultado {
+  color: #b6c2d9;
+  margin: 25px 0;
+}
+
+.resultado span {
+  color: #00d4ff;
+  font-weight: bold;
+}
+
+/* Produtos lado a lado */
+.cards-produtos {
+  display: flex;
+  gap: 22px;
+}
+
+/* Card de produto */
+.produto {
+  background-color: #0f172a;
+  border: 1px solid #31205c;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 30%;
+}
+
+/* Ajusta melhor as imagens */
+.produto img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.info-produto {
+  padding: 15px;
+}
+
+.info-produto h4 {
+  font-size: 18px;
+  margin: 5px 0 10px;
+}
+
+.info-produto p {
+  color: #b6c2d9;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Preço e botão do carrinho */
+.preco-botao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.preco-botao strong {
+  color: #00d4ff;
+  font-size: 24px;
+}
+
+.preco-botao button {
+  background: linear-gradient(135deg, #00d4ff, #9b5cff);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Permite quebrar os produtos para baixo */
+.cards-produtos {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+/* Efeito ao passar o mouse no produto */
+.produto:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+  border-color: #00d4ff;
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+  padding: 20px;
+  background-color: #030712;
+  color: #aaa;
+}

@@ -1,0 +1,148 @@
+/* Estilo geral da página */
+body {
+  margin: 0;
+  background-color: #020617;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho com logo e menu */
+.cabecalho {
+  background-color: #030712;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 100px;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* Logo ao lado do texto */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icone-logo {
+  background: linear-gradient(135deg, #00d4ff, #9b5cff);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.logo h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.logo p {
+  font-size: 12px;
+  margin: 0;
+  color: #aaa;
+}
+
+/* Menu de navegação */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 35px;
+}
+
+nav a:hover,
+nav .ativo {
+  color: #00d4ff;
+}
+
+/* Conteúdo central */
+.conteudo {
+  width: 87%;
+  margin: 0 auto;
+}
+
+/* Título da página sobre */
+.topo-sobre {
+  text-align: center;
+  padding: 45px 20px 35px;
+}
+
+.topo-sobre h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.topo-sobre h2 span {
+  color: #00d4ff;
+}
+
+.topo-sobre p {
+  color: white;
+  font-size: 17px;
+}
+
+/* Card da missão */
+.missao {
+  background-color: #182233;
+  border: 1px solid #31205c;
+  border-radius: 10px;
+  padding: 45px;
+  margin-top: 25px;
+}
+
+.missao h3 {
+  font-size: 28px;
+  margin-top: 0;
+}
+
+.missao p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Cards de valores */
+.valores {
+  display: flex;
+  gap: 22px;
+  margin-top: 45px;
+}
+
+.card-valor {
+  background-color: #0f172a;
+  border: 1px solid #31205c;
+  border-radius: 10px;
+  padding: 25px;
+  width: 25%;
+  text-align: center;
+}
+
+/* Ícones dos cards */
+.icone-valor {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 18px;
+  border: 1px solid #00d4ff;
+  border-radius: 50%;
+  background-color: #16233a;
+  color: #00d4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.card-valor h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.card-valor p {
+  color: #b6c2d9;
+  line-height: 1.5;
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+  padding: 20px;
+  background-color: #030712;
+  color: #aaa;
+}
