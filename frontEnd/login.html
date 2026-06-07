@@ -43,12 +43,12 @@
 
     <!-- Card com formulário -->
     <section class="card-login">
-      <form>
+      <form id="formLogin">
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="✉️  seu@email.com">
+        <input type="email" id="email" placeholder="✉️  seu@email.com" required>
 
         <label for="senha">Senha</label>
-        <input type="password" id="senha" placeholder="🔒  ********">
+        <input type="password" id="senha" placeholder="🔒  ********" required>
 
         <a href="#" class="esqueceu">Esqueceu a senha?</a>
 
@@ -56,7 +56,7 @@
       </form>
 
       <p class="cadastro">
-        Não tem uma conta? <a href="#">Cadastre-se</a>
+        Não tem uma conta? <a href="#" id="linkCadastro">Cadastre-se</a>
       </p>
 
       <div class="divisor">
@@ -70,12 +70,13 @@
     </section>
 
     <!-- Rodapé -->
-<footer class="rodape">
-  <p>© 2025 Geek Legends - Todos os direitos reservados.</p>
-</footer>
+    <footer class="rodape">
+      <p>© 2025 Geek Legends - Todos os direitos reservados.</p>
+    </footer>
 
   </main>
 
 </body>
+<script type="module" src="assets/js/auth.js"></script>
 
 </html>
