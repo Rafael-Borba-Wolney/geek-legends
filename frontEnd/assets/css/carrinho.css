@@ -165,3 +165,11 @@ nav .ativo {
   font-size: 12px;
   font-weight: bold;
 }
+
+#secao-checkout {
+  display: none !important;
+}
+
+#secao-checkout.mostrado {
+  display: block !important;
+}
