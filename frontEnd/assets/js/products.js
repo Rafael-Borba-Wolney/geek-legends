@@ -80,13 +80,11 @@ function renderizarProdutos(produtos) {
     const card = document.createElement('div');
     card.className = 'produto';
     card.innerHTML = `
-<!-- If there is no image, it doesn't load one. -->
 <img src="${produto.imagem_url || ''}" alt="${produto.nome}" onerror="this.style.display='none'">
       <div class="info-produto">
         <h4>${produto.nome}</h4>
         <p>${produto.descricao}</p>
         <div class="preco-botao">
-    <!-- It now converts the string value on the price to a number before sending it to the frontend. -->
 <strong>R$ ${Number(produto.preco).toFixed(2)}</strong>
           <button class="btn-carrinho" data-produto-id="${produto.id}" data-produto-nome="${produto.nome}">
             🛒
