@@ -120,6 +120,10 @@ function renderizarItensCarrinho(itens, total) {
 
   containerItens.appendChild(table);
 
+  const secaoCheckout = document.getElementById('secao-checkout');
+  if (secaoCheckout) {
+    secaoCheckout.classList.add('mostrado');
+  }
   // Adiciona listeners aos botões
   adicionarListenersAtualizacao();
 }
