@@ -1,5 +1,5 @@
 import { usuarioLogado, logout, obterUsuario } from './auth.js';
-
+import * as api from './api.js';
 // ========================================
 // ATUALIZAR NAVBAR COM USUÁRIO LOGADO
 // ========================================
@@ -71,8 +71,9 @@ export async function atualizarContadorCarrinho() {
 // ========================================
 // INICIALIZAR UI GLOBAL
 // ========================================
-export function inicializarUI() {
+export async function inicializarUI() {
   atualizarNavbar();
+  await atualizarContadorCarrinho();
 }
 
 // Executar ao carregar a página
