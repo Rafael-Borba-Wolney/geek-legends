@@ -46,6 +46,29 @@ export function protegerRota(permitirSemLogin = false) {
 }
 
 // ========================================
+// ATUALIZAR CONTADOR DO CARRINHO
+// ========================================
+export async function atualizarContadorCarrinho() {
+  try {
+    const usuario = usuarioLogado();
+
+    const contador = document.getElementById('contador-carrinho');
+
+    if (!contador) return;
+
+    if (!usuario) {
+      contador.textContent = '0';
+      return;
+    }
+
+    const carrinho = await api.verCarrinhoAPI();
+    contador.textContent = carrinho.itens.length;
+  } catch (erro) {
+    console.error('Erro ao atualizar contador:', erro);
+  }
+}
+
+// ========================================
 // INICIALIZAR UI GLOBAL
 // ========================================
 export function inicializarUI() {
