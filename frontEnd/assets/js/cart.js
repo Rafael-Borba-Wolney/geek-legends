@@ -1,7 +1,7 @@
 import * as api from './api.js';
-import { protegerRota, usuarioLogado } from './ui.js';
+import { protegerRota } from './ui.js';
+import { usuarioLogado } from './auth.js';// ========================================
 
-// ========================================
 // ELEMENTOS DO DOM
 // ========================================
 const containerCarrinho = document.querySelector('.carrinho-vazio');
@@ -94,7 +94,7 @@ function renderizarItensCarrinho(itens, total) {
   // Body com itens
   const body = document.createElement('tbody');
   itens.forEach((item) => {
-    const subtotal = item.preco * item.quantidade;
+    const subtotal = Number(item.preco) * item.quantidade;
     const tr = document.createElement('tr');
     tr.style.borderBottom = '1px solid #1e293b';
     tr.innerHTML = `
@@ -102,7 +102,7 @@ function renderizarItensCarrinho(itens, total) {
         <img src="${item.imagem_url}" alt="${item.nome}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 5px; margin-right: 10px; vertical-align: middle;">
         <span>${item.nome}</span>
       </td>
-      <td style="padding: 15px;">R$ ${item.preco.toFixed(2)}</td>
+<td style="padding: 15px;">R$ ${Number(item.preco).toFixed(2)}</td>
       <td style="padding: 15px;">
         <input type="number" min="1" value="${item.quantidade}" data-produto-id="${item.produto_id}" class="input-quantidade" style="width: 50px; padding: 5px; background-color: #1e293b; border: 1px solid #31205c; border-radius: 4px; color: white;">
       </td>
@@ -189,7 +189,7 @@ function adicionarListenersAtualizacao() {
 // ========================================
 function atualizarTotalCarrinho(total) {
   if (totalCarrinho) {
-    totalCarrinho.textContent = `R$ ${total.toFixed(2)}`;
+    totalCarrinho.textContent = `R$ ${Number(total).toFixed(2)}`;
   }
 }
 
