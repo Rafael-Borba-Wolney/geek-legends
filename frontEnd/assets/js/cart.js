@@ -1,6 +1,6 @@
 import * as api from './api.js';
-import { protegerRota } from './ui.js';
-import { usuarioLogado } from './auth.js';// ========================================
+import { protegerRota, atualizarContadorCarrinho } from './ui.js';
+import { usuariologado } from './auth.js';// ========================================
 
 // ELEMENTOS DO DOM
 // ========================================
@@ -13,7 +13,7 @@ const totalCarrinho = document.getElementById('total-carrinho');
 // PROTEGER ROTA (usuário deve estar logado)
 // ========================================
 function verificarAutenticacao() {
-  if (!usuarioLogado()) {
+  if (!usuariologado()) {
     alert('Você precisa estar logado para acessar o carrinho!');
     window.location.href = 'login.html';
   }
@@ -217,17 +217,17 @@ async function finalizarCompra() {
 // ========================================
 // ATUALIZAR CONTADOR NA NAVBAR
 // ========================================
-async function atualizarContadorCarrinho() {
-  try {
-    const carrinho = await api.verCarrinhoAPI();
-    const contador = document.getElementById('contador-carrinho');
-    if (contador) {
-      contador.textContent = carrinho.itens.length;
-    }
-  } catch (erro) {
-    console.error('Erro ao atualizar contador:', erro);
-  }
-}
+// async function atualizarContadorCarrinho() {
+//   try {
+//     const carrinho = await api.verCarrinhoAPI();
+//     const contador = document.getElementById('contador-carrinho');
+//     if (contador) {
+//       contador.textContent = carrinho.itens.length;
+//     }
+//   } catch (erro) {
+//     console.error('Erro ao atualizar contador:', erro);
+//   }
+// }
 
 // ========================================
 // SETUP DO BOTÃO FINALIZAR
