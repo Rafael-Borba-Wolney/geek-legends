@@ -29,7 +29,7 @@ async function carregarPedidos() {
       `;
       card.innerHTML = `
         <h3>Pedido #${pedido.id}</h3>
-        <p><strong>Total:</strong> R$ ${pedido.total.toFixed(2)}</p>
+        <p><strong>Total:</strong> R$ ${Number(pedido.total).toFixed(2)}</p>
         <p><strong>Status:</strong> <span style="color: #00d4ff;">${pedido.status}</span></p>
         <p><strong>Data:</strong> ${new Date(pedido.criado_em).toLocaleDateString('pt-BR')}</p>
         <button onclick="verDetalhesPedido(${pedido.id})" style="
@@ -53,9 +53,9 @@ async function carregarPedidos() {
 window.verDetalhesPedido = async (id) => {
   try {
     const pedido = await api.detalharPedidoAPI(id);
-    let detalhes = `Pedido #${pedido.id}\nTotal: R$ ${pedido.total.toFixed(2)}\n\nItens:\n`;
+    let detalhes = `Pedido #${pedido.id}\nTotal: R$ ${Number(pedido.total).toFixed(2)}\n\nItens:\n`;
     pedido.itens.forEach((item) => {
-      detalhes += `- ${item.nome} (x${item.quantidade}): R$ ${item.preco_unitario.toFixed(2)}\n`;
+      detalhes += `- ${item.nome} (x${item.quantidade}): R$ ${Number(item.preco_unitario).toFixed(2)}\n`;
     });
     alert(detalhes);
   } catch (erro) {
