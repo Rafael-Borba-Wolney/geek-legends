@@ -99,7 +99,9 @@ function renderizarItensCarrinho(itens, total) {
     tr.style.borderBottom = '1px solid #1e293b';
     tr.innerHTML = `
       <td style="padding: 15px;">
-        <img src="${item.imagem_url}" alt="${item.nome}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 5px; margin-right: 10px; vertical-align: middle;">
+${item.imagem_url ? `
+<img src="${item.imagem_url}" alt="${item.nome}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 5px; margin-right: 10px; vertical-align: middle;">
+` : ''}
         <span>${item.nome}</span>
       </td>
 <td style="padding: 15px;">R$ ${Number(item.preco).toFixed(2)}</td>
@@ -203,7 +205,7 @@ async function finalizarCompra() {
 
   try {
     const pedido = await api.checkoutAPI();
-    alert(`Pedido #${pedido.id} realizado com sucesso! Total: R$ ${pedido.total.toFixed(2)}`);
+    alert(`Pedido #${pedido.id} realizado com sucesso! Total: R$ ${Number(pedido.total).toFixed(2)}`);
 
     // Redireciona para página de sucesso ou produtos
     setTimeout(() => {
