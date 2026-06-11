@@ -1,5 +1,4 @@
 import { usuarioLogado, logout, obterUsuario } from './auth.js';
-import * as api from './api.js';
 // ========================================
 // ATUALIZAR NAVBAR COM USUÁRIO LOGADO
 // ========================================
@@ -45,29 +44,54 @@ export function protegerRota(permitirSemLogin = false) {
   }
 }
 
-// ========================================
-// ATUALIZAR CONTADOR DO CARRINHO
-// ========================================
-export async function atualizarContadorCarrinho() {
+// // ========================================
+// // ATUALIZAR CONTADOR DO CARRINHO
+// // ========================================
+// export async function atualizarContadorCarrinho() {
+//   try {
+//     const usuario = usuarioLogado();
+//
+//     const contador = document.getElementById('contador-carrinho');
+//
+//     if (!contador) return;
+//
+//     if (!usuario) {
+//       contador.textContent = '0';
+//       return;
+//     }
+//
+//     const carrinho = await api.verCarrinhoAPI();
+//     contador.textContent = carrinho.itens.length;
+//   } catch (erro) {
+//     console.error('Erro ao atualizar contador:', erro);
+//   }
+// }
+async function atualizarContadorCarrinho() {
   try {
-    const usuario = usuarioLogado();
-
     const contador = document.getElementById('contador-carrinho');
 
     if (!contador) return;
 
-    if (!usuario) {
+    const token = localStorage.getItem('token');
+
+    if (!token) {
       contador.textContent = '0';
       return;
     }
 
-    const carrinho = await api.verCarrinhoAPI();
-    contador.textContent = carrinho.itens.length;
+    const resposta = await fetch('http://localhost:3001/api/carrinho', {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+
+    const carrinho = await resposta.json();
+
+    contador.textContent = carrinho.itens?.length || 0;
   } catch (erro) {
-    console.error('Erro ao atualizar contador:', erro);
+    console.error('Erro contador:', erro);
   }
 }
-
 // ========================================
 // INICIALIZAR UI GLOBAL
 // ========================================
@@ -77,4 +101,8 @@ export async function inicializarUI() {
 }
 
 // Executar ao carregar a página
-document.addEventListener('DOMContentLoaded', inicializarUI);
+// document.addEventListener('DOMContentLoaded', inicializarUI);
+document.addEventListener('DOMContentLoaded', async () => {
+  await inicializarUI();
+  await atualizarContadorCarrinho();
+});
