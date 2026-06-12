@@ -1,6 +1,6 @@
 import * as api from './api.js';
 import { protegerRota, atualizarContadorCarrinho } from './ui.js';
-import { usuariologado } from './auth.js';// ========================================
+import { usuarioLogado } from './auth.js';// ========================================
 
 // ELEMENTOS DO DOM
 // ========================================
@@ -13,7 +13,7 @@ const totalCarrinho = document.getElementById('total-carrinho');
 // PROTEGER ROTA (usuário deve estar logado)
 // ========================================
 function verificarAutenticacao() {
-  if (!usuariologado()) {
+  if (!usuarioLogado()) {
     alert('Você precisa estar logado para acessar o carrinho!');
     window.location.href = 'login.html';
   }
@@ -25,7 +25,7 @@ function verificarAutenticacao() {
 async function carregarCarrinho() {
   try {
     const carrinho = await api.verCarrinhoAPI();
-
+    console.log(carrinho);
     if (carrinho.itens.length === 0) {
       mostrarCarrinhoVazio();
       return;
@@ -124,7 +124,7 @@ ${item.imagem_url ? `
 
   const secaoCheckout = document.getElementById('secao-checkout');
   if (secaoCheckout) {
-    secaoCheckout.classList.add('mostrado');
+    secaoCheckout.style.display = 'block';
   }
   // Adiciona listeners aos botões
   adicionarListenersAtualizacao();

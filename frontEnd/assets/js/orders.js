@@ -1,5 +1,5 @@
 import * as api from './api.js';
-import { usuarioLogado } from './ui.js';
+import { usuarioLogado } from './auth.js';
 
 const containerPedidos = document.getElementById('container-pedidos');
 

@@ -66,7 +66,7 @@ export function protegerRota(permitirSemLogin = false) {
 //     console.error('Erro ao atualizar contador:', erro);
 //   }
 // }
-async function atualizarContadorCarrinho() {
+export async function atualizarContadorCarrinho() {
   try {
     const contador = document.getElementById('contador-carrinho');
 
@@ -85,9 +85,16 @@ async function atualizarContadorCarrinho() {
       }
     });
 
+    // const carrinho = await resposta.json();
+    //
+    // contador.textContent = carrinho.itens?.length || 0;
     const carrinho = await resposta.json();
 
-    contador.textContent = carrinho.itens?.length || 0;
+    const totalItens = carrinho.itens?.reduce((total, item) => {
+      return total + item.quantidade;
+    }, 0) || 0;
+
+    contador.textContent = totalItens;
   } catch (erro) {
     console.error('Erro contador:', erro);
   }

@@ -162,7 +162,7 @@ async function adicionarListenersCarrinho() {
       try {
         await api.adicionarCarrinhoAPI(parseInt(produtoId), 1);
         alert(`${produtoNome} adicionado ao carrinho!`);
-        atualizarContadorCarrinho();
+        // atualizarContadorCarrinho();
       } catch (erro) {
         alert(`Erro: ${erro.message}`);
       }
