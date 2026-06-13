@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrinho - Geek Legends</title>
 
-  <!-- CSS da página do carrinho -->
   <link rel="stylesheet" href="assets/css/carrinho.css">
 </head>
 
 <body>
 
-  <!-- Cabeçalho com logo e menu -->
   <header class="cabecalho">
+
     <div class="logo">
       <div class="icone-logo">GL</div>
 
@@ -28,61 +27,86 @@
       <a href="produtos.html">Produtos</a>
       <a href="sobre.html">Sobre</a>
       <a href="login.html">Login</a>
-      <a href="carrinho.html" class="link-carrinho"> 🛒 <span id="contador-carrinho">0</span> </a>
+
+      <a href="carrinho.html" class="link-carrinho">
+        🛒 <span id="contador-carrinho">0</span>
+      </a>
     </nav>
+
   </header>
 
-  <main>
+  <main style="min-height: 100vh;">
 
-    <!-- Carrinho vazio (inicialmente mostrado) -->
     <section class="carrinho-vazio">
+
       <div class="icone-carrinho">🛒</div>
+
       <h2>Seu carrinho está vazio</h2>
-      <p>Adicione produtos ao carrinho para finalizar sua compra</p>
-      <a href="produtos.html" class="botao-carrinho">🛍️ Explorar Produtos</a>
+
+      <p>
+        Adicione produtos ao carrinho para finalizar sua compra
+      </p>
+
+      <a href="produtos.html" class="botao-carrinho">
+        🛍️ Explorar Produtos
+      </a>
+
     </section>
 
-    <!-- Itens do carrinho (mostrado quando há produtos) -->
     <section id="container-itens-carrinho" style="padding: 50px 100px; display: none;">
-      <h2 style="margin-bottom: 30px;">Seu Carrinho</h2>
-      <!-- A tabela será inserida aqui via JavaScript -->
     </section>
 
-    <!-- Total e botão de finalizar -->
-    <section id="secao-checkout" style="padding: 0 100px 50px; display: none;">
-      <div
-        style="text-align: right; background-color: #0f172a; padding: 20px; border-radius: 10px; border: 1px solid #31205c; margin-top: 30px;">
+    <section style="padding: 0 100px 50px;">
+
+      <div style="
+          text-align: right;
+          background-color: #0f172a;
+          padding: 20px;
+          border-radius: 10px;
+          border: 1px solid #31205c;
+          margin-top: 30px;
+        ">
+
         <h3>Total do Carrinho</h3>
-        <h2 style="color: #00d4ff; font-size: 32px; margin: 10px 0;">
+
+        <h2 style="
+            color: #00d4ff;
+            font-size: 32px;
+            margin: 10px 0;
+          ">
           <span id="total-carrinho">R$ 0.00</span>
         </h2>
 
         <button id="btn-finalizar-compra" style="
-          width: 100%;
-          padding: 15px;
-          background: linear-gradient(90deg, #00d4ff, #9b2cff);
-          color: white;
-          border: none;
-          border-radius: 8px;
-          font-weight: bold;
-          font-size: 16px;
-          cursor: pointer;
-          margin-top: 20px;
-        ">
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(90deg, #00d4ff, #9b2cff);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+          ">
           ⚡ Finalizar Compra
         </button>
+
       </div>
+
     </section>
 
-    <!-- Rodapé -->
-    <footer class="rodape" style="margin-top:auto;">
-      <p class="direitos">© 2026 Geek Legends. Todos os direitos reservados.</p>
-    </footer>
   </main>
 
+  <footer class="rodape">
+    <p class="direitos">
+      © 2026 Geek Legends. Todos os direitos reservados.
+    </p>
+  </footer>
 
   <script type="module" src="assets/js/cart.js"></script>
   <script type="module" src="assets/js/ui.js"></script>
+
 </body>
 
 </html>
