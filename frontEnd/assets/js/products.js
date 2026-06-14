@@ -1,6 +1,6 @@
 import * as api from './api.js';
 import { protegerRota, atualizarContadorCarrinho } from './ui.js';
-
+import { atualizarContadorCarrinho } from './ui.js';
 // ========================================
 // ELEMENTOS DO DOM
 // ========================================
@@ -161,6 +161,7 @@ async function adicionarListenersCarrinho() {
 
       try {
         await api.adicionarCarrinhoAPI(parseInt(produtoId), 1);
+        await atualizarContadorCarrinho();
         alert(`${produtoNome} adicionado ao carrinho!`);
         // atualizarContadorCarrinho();
       } catch (erro) {

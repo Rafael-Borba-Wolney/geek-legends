@@ -1,7 +1,6 @@
 import * as api from './api.js';
 import { atualizarContadorCarrinho } from './ui.js';
 import { usuarioLogado } from './auth.js';
-
 // ========================================
 // ELEMENTOS DO DOM
 // ========================================
@@ -172,7 +171,7 @@ async function atualizarQuantidade(produtoId, novaQuantidade) {
   try {
 
     await api.adicionarCarrinhoAPI(produtoId, novaQuantidade);
-
+    await atualizarContadorCarrinho();
     await carregarCarrinho();
 
     atualizarContadorCarrinho();

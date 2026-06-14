@@ -1,4 +1,4 @@
-import { usuarioLogado, logout, obterUsuario } from './auth.js';
+import { usuarioLogado, obterUsuario } from './auth.js';
 // ========================================
 // ATUALIZAR NAVBAR COM USUÁRIO LOGADO
 // ========================================
@@ -20,7 +20,7 @@ export function atualizarNavbar() {
       loginLink.href = '#';
       loginLink.addEventListener('click', (e) => {
         e.preventDefault();
-        logout();
+        window.location.href = 'perfil.html';
       });
     }
   } else {
@@ -44,28 +44,6 @@ export function protegerRota(permitirSemLogin = false) {
   }
 }
 
-// // ========================================
-// // ATUALIZAR CONTADOR DO CARRINHO
-// // ========================================
-// export async function atualizarContadorCarrinho() {
-//   try {
-//     const usuario = usuarioLogado();
-//
-//     const contador = document.getElementById('contador-carrinho');
-//
-//     if (!contador) return;
-//
-//     if (!usuario) {
-//       contador.textContent = '0';
-//       return;
-//     }
-//
-//     const carrinho = await api.verCarrinhoAPI();
-//     contador.textContent = carrinho.itens.length;
-//   } catch (erro) {
-//     console.error('Erro ao atualizar contador:', erro);
-//   }
-// }
 export async function atualizarContadorCarrinho() {
   try {
     const contador = document.getElementById('contador-carrinho');

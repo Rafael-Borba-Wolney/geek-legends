@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil - Geek Legends</title>
+  <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="logo">
+      <div class="icone-logo">GL</div>
+      <div>
+        <h1>Geek Legends</h1>
+        <p>Produtos Dignos de Lenda</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="login.html" id="link-usuario-navbar">Login</a>
+      <a href="carrinho.html" class="link-carrinho"> 🛒 <span id="contador-carrinho">0</span> </a>
+    </nav>
+  </header>
+
+  <main class="conteudo-login" style="margin: 30px auto;">
+
+    <section class="topo-login">
+      <div class="icone-login">👤</div>
+      <h2>Meu Perfil</h2>
+    </section>
+
+    <section class="card-login">
+      <div id="dados-perfil" style="text-align: left; color: white;">
+        <p><strong>Nome:</strong> <span id="nome-usuario">-</span></p>
+        <p><strong>Email:</strong> <span id="email-usuario">-</span></p>
+        <p><strong>Tipo:</strong> <span id="tipo-usuario">-</span></p>
+      </div>
+
+      <hr style="border: none; border-top: 1px solid #31205c; margin: 20px 0;">
+
+      <a href="pedidos.html" style="
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        background: linear-gradient(90deg, #00d4ff, #9b2cff);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      ">
+        📦 Ver Meus Pedidos
+      </a>
+
+      <button id="btn-logout" style="
+        width: 100%;
+        padding: 12px;
+        background-color: #dc2626;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+      ">
+        🚪 Fazer Logout
+      </button>
+    </section>
+
+    <footer class="rodape" style="margin-top: 40px;">
+      <p>© 2026 Geek Legends - Todos os direitos reservados.</p>
+    </footer>
+
+  </main>
+
+  <script type="module" src="assets/js/profile.js"></script>
+  <script type="module" src="assets/js/navbar.js"></script>
+  <script type="module" src="assets/js/toast.js"></script>
+
+</body>
+
+</html>
