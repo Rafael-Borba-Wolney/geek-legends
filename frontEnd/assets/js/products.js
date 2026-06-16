@@ -1,5 +1,4 @@
 import * as api from './api.js';
-import { protegerRota, atualizarContadorCarrinho } from './ui.js';
 import { atualizarContadorCarrinho } from './ui.js';
 // ========================================
 // ELEMENTOS DO DOM
@@ -163,29 +162,12 @@ async function adicionarListenersCarrinho() {
         await api.adicionarCarrinhoAPI(parseInt(produtoId), 1);
         await atualizarContadorCarrinho();
         alert(`${produtoNome} adicionado ao carrinho!`);
-        // atualizarContadorCarrinho();
       } catch (erro) {
         alert(`Erro: ${erro.message}`);
       }
     });
   });
 }
-//
-// // ========================================
-// // ATUALIZAR CONTADOR DO CARRINHO NA NAVBAR
-// // ========================================
-// async function atualizarContadorCarrinho() {
-//   try {
-//     const carrinho = await api.verCarrinhoAPI();
-//     const contador = document.getElementById('contador-carrinho');
-//     if (contador) {
-//       contador.textContent = carrinho.itens.length;
-//     }
-//   } catch (erro) {
-//     console.error('Erro ao atualizar carrinho:', erro);
-//   }
-// }
-
 // ========================================
 // BUSCA EM TEMPO REAL
 // ========================================
